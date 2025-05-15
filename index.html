@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lokam Harika | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffe4ec, #ffffff);
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #fff;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      animation: fadeIn 1s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-pic-large {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .profile-pic-large.glow {
+      box-shadow: 0 0 30px 10px #ff69b4;
+      animation: glowPulse 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from {
+        box-shadow: 0 0 20px 5px #f48fb1;
+      }
+      to {
+        box-shadow: 0 0 30px 15px #f06292;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .typing-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      height: auto;
+      max-width: 600px;
+      margin: 0 auto;
+      min-height: 1.5rem;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #f06292;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    ul li {
+      background-color: #fff0f5;
+      border-radius: 15px;
+      padding: 12px 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      color: #444;
+      font-weight: 600;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    ul li:hover {
+      transform: scale(1.05);
+      background-color: #fce4ec;
+    }
+
+    .project {
+      background-color: #fff8fb;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-left: 5px solid #f48fb1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      color: #ec407a;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background-color: #fffafc;
+      color: #333;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #f06292;
+      outline: none;
+    }
+
+    button {
+      background-color: #f06292;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ec407a;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #f8bbd0;
+      color: #fff;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="photo5.jpg" alt="Profile" class="profile-pic-large" id="profile-img">
+    <div>
+      <h1>Lokam Harika</h1>
+      <p class="typing-text" id="typing"></p>
+    </div>
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <h3 style="text-align:center; color:#ba68c8; margin-bottom:10px;">Technical</h3>
+    <ul>
+      <li>Python (Basics)</li>
+      <li>C (Basics)</li>
+      <li>Java (Basics)</li>
+      <li>MySQL</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Microsoft Office</li>
+      <li>Jupyter Notebook</li>
+      <li>VS Code</li>
+    </ul>
+    <h3 style="text-align:center; color:#ba68c8; margin-top:30px; margin-bottom:10px;">Non-Technical</h3>
+    <ul>
+      <li>Team Work</li>
+      <li>Communication Skills</li>
+      <li>Time Management</li>
+      <li>Leadership Skills</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Pain Recognition with Physiological Signals</h3>
+      <p>This project utilizes multi-level deep learning algorithms to automatically recognize pain through physiological signals and contextual data. By analyzing features such as heart rate, skin conductance, and temperature, it enhances pain assessment accuracy for individuals unable to communicate verbally.</p>
+      <p><strong>Technology:</strong> Deep Learning</p>
+    </div>
+    <div class="project">
+      <h3>AI Song Lyrics Generator</h3>
+      <p>This project uses NLP and AI to generate personalized song lyrics based on user-defined inputs such as genre, mood, rhyme scheme, and creativity. It features a Streamlit interface powered by the Gemini API for real-time lyric creation.</p>
+      <p><strong>Technology:</strong> Generative AI</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Lokam Harika. All rights reserved.
+  </footer>
+
+  <script>
+    const text = "I'm a final-year B.Tech student in AI & ML, passionate about creating intelligent solutions and exploring the power of technology to make life better.";
+    const typingElement = document.getElementById("typing");
+    const imageElement = document.getElementById("profile-img");
+    let index = 0;
+    const glowTriggerLength = 60; // Number of characters typed before glow
+
+    function type() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+
+        // Add glow when the typing reaches glowTriggerLength
+        if (index === glowTriggerLength) {
+          imageElement.classList.add("glow");
+        }
+
+        setTimeout(type, 100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+
+</html>
